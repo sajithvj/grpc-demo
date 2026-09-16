@@ -42,11 +42,11 @@ public class KafkaProducerConfig {
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,bootStrapServers);
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-    props.put("sasl.jaas.config","org.apache.kafka.common.security.scram.ScramLoginModule required username=\"avnadmin\" password=\"AVNS_v4EywHz-wycHum3wwo8\";");
+    props.put("sasl.jaas.config","org.apache.kafka.common.security.scram.ScramLoginModule required username= password=;");
     props.put("sasl.mechanism",saslmechanism);
     props.put("security.protocol",securityprotocol);
 //    props.put("session.timeout.ms",sessionTimeout);
-    props.put("ssl.truststore.location", "D:\\grpc-demo\\src\\main\\resources\\client-certs\\ca.pem");
+    props.put("ssl.truststore.location", "");
     props.put("ssl.truststore.type", "PEM");
 //    props.put("ssl.truststore.password", truststorePassword);
     props.put("cleanup.policy","compact");

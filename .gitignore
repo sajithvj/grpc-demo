@@ -21,6 +21,7 @@ buildNumber.properties
 *.war
 *.ear
 *.tar.gz
+*.pem
 
 # ==========================================
 # IntelliJ IDEA Settings

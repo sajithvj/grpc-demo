@@ -14,7 +14,7 @@ spring:
           target: static://localhost:9090
   data:
     mongodb:
-      uri: mongodb+srv://myAtlasDBUser:myatlas-001@myatlasclusteredu.h33zgbz.mongodb.net/?appName=myAtlasClusterEDU
+      uri:
       database: demo
       show-sql: true
   kafka:
@@ -23,13 +23,13 @@ spring:
       auto-startup: true
     properties:
       sasl.mechanism: SCRAM-SHA-256
-      bootstrap.servers: kafka-3d3dad9a-sajithjayaraman74-192c.l.aivencloud.com:13703
-      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username='avnadmin' password='AVNS_v4EywHz-wycHum3wwo8';
+      bootstrap.servers:
+      sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username= password=;
       security.protocol: SASL_SSL
       session.timeout.ms: 45000
       acks: all
-      truststore.location: classpath:/client-certs/ca.pem
-      truststore.password: AVNS_v4EywHz-wycHum3wwo8
+      truststore.location:
+      truststore.password:
       ssl.truststore.type: PEM
   logging:
     level:
