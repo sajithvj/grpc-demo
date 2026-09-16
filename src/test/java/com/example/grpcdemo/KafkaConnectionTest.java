@@ -8,7 +8,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 public class KafkaConnectionTest {
   public static void main(String[] args) {
     Properties props = new Properties();
-    props.setProperty("bootstrap.servers", "kafka-3d3dad9a-sajithjayaraman74-192c.l.aivencloud.com:13703");
+    props.setProperty("bootstrap.servers", "");
     props.setProperty("security.protocol", "SASL_SSL");
     // Note: When running in an IDE, you may need to specify
     // the full path to certificate files
@@ -16,7 +16,7 @@ public class KafkaConnectionTest {
     props.setProperty("ssl.truststore.location", "");
     props.setProperty("ssl.truststore.type", "PEM");
     props.setProperty("sasl.mechanism", "SCRAM-SHA-256");
-    props.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.scram.ScramLoginModule required username=\"avnadmin\" password=\"AVNS_v4EywHz-wycHum3wwo8\";");
+    props.setProperty("sasl.jaas.config", "org.apache.kafka.common.security.scram.ScramLoginModule required username= password=;");
     props.setProperty("key.serializer", StringSerializer.class.getName());
     props.setProperty("value.serializer", StringSerializer.class.getName());
 
