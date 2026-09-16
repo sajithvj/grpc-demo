@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+option java_package = "com.example.grpcdemo.proto";
+option java_multiple_files = true;
+
+service HelloWorld {
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
+}
+
+service GetOrderService {
+   rpc GetOrder(OrderRequest) returns (OrderResponse){}
+
+}
+
+message OrderRequest{
+ string id =1;
+}
+
+message OrderResponse{
+ string message=1;
+}
+
+message Book {
+  string id = 1;
+  string name = 2;
+  string author = 3;
+  int32 price = 4;
+}
+
+message BookList {
+  repeated Book books = 1;
+}
+
+message Empty {}
+
+message BookRequest {
+  string id = 1;
+}
+
+service BookService {
+  rpc GetBookById(BookRequest) returns (Book) {}
+  rpc GetAllBooks(Empty) returns (BookList) {}
+}
