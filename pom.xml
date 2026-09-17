@@ -16,7 +16,7 @@
     <description>Minimal Spring Boot 4.1 gRPC server + client example</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>25</java.version>
     </properties>
 
     <dependencies>
